@@ -1,1 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/list-display-styles.scss";
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:wght@400;700&display=swap');
+
+
+:root {
+--color-1: #ebe9e1;
+--color-2: #E43D12;
+--color-3: #FFA2B6;
+--color-4: #97BE5A;
+--color-5: #ffa2b652;
+
+}
+
+body {
+    font-family: 'Radio Canada Big', sans-serif;
+    background-color: var(--color-1);
+    color : var(--color-2);
+    margin: 0px 5%;
+}
+
+h1 {
+    font-family: 'Radio Canada Big', sans-serif;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+
+a {
+    color: var(--color-2);
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover { color: var(--color-3); }
+
+button {
+  background-color: var(--color-2);
+  color: var(--color-1);
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  margin-left: 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover { background-color: var(--color-3); }
+
+.big-button {
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+}
+
+.back { margin-left: 5%; }
+
+input, textarea, select {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: none;
+  margin-right: 1em;
+  background-color: var(--color-1);
+  box-shadow: 0 0 0 1px var(--color-2);
+  outline: none;
+}

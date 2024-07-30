@@ -1,0 +1,55 @@
+
+#logo {
+  font-size: 2em;
+  color: var(--color-3); //override the body color
+  margin-bottom: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; //links on the right
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  pointer-events: none; // make the links behind the navbar clickable
+  padding-top: 1em;
+}
+
+nav * {
+  pointer-events: auto; // make everything from the navbar clickable too
+}
+#nav-links {
+  margin-bottom: 0;
+}
+#nav-links li {
+  margin-top: 1em;
+  list-style-type: none;
+  display: flex;
+}
+
+#nav-links a {
+  color: var(--color-2);
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-left: auto; //push text to the right
+}
+#nav-links a:hover { color: var(--color-3); }
+#nav-links a.active { color: var(--color-3); }
+
+.search {
+  position: relative;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.search-bar {
+  display: none; // hide the search bar by default
+
+}
+
+img {
+  width: 25px;;
+  height: auto;
+}

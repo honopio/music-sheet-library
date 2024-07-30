@@ -1,0 +1,20 @@
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 80px;
+  //make it shrink to the bottom
+
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}

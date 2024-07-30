@@ -1,0 +1,26 @@
+<div class="back">
+  <h2 style="margin-top: 0;"><a (click)="goBack()">> back <</a></h2>
+</div>
+<br>
+
+<div *ngIf="sheet" class="sheet-detail">
+
+  <div class="sheet-image">
+    <a href="{{ sheet.pdfPath }}" target="_blank">
+    <img [src]="sheet.firstpage" alt="Sheet Preview">
+    </a>
+  </div>
+
+  <div class="sheet-info">
+
+    <h1>{{ sheet.title }}</h1>
+    <h2>by <a (click)="searchByComposer(sheet.composer)">{{ sheet.composer }}</a></h2>
+    <p>Instrument : <a (click)="searchByInstrument(sheet.instrument)">{{ sheet.instrument }}</a></p>
+    <br>
+
+    <a href="{{ sheet.pdfPath }}" target="_blank">
+      <button type="button" class="big-button">Open PDF</button>
+    </a>
+  </div>
+
+</div>

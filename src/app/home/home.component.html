@@ -1,0 +1,54 @@
+
+<div class="background-stripe"></div>
+
+
+<div class="welcome">
+  <h1>The best place to learn and play new music pieces.</h1>
+  <h3>Easy Sheet is a free online music sheet viewer. Our library offers a wide range of sheet music for all skill levels and genres.
+    <br>Use the search bar on the top right to find your favorite pieces. You can look for a specific title, composer, or instrument.
+    <br>If you want to explore our library, you can <a href="#latest-releases">check our favorite sheets</a> or <a href="#by-instrument">search by instrument.</a></h3><br><br>
+</div>
+
+<div id="our-favorites" class="section">
+  <h2>Our favorites</h2>
+
+  <div class="sheet-list">
+    <div class="sheet-card" *ngFor="let sheet of favSheets">
+      <a routerLink="/list/{{ sheet.id }}">
+        <img [src]="sheet.firstpage" alt="Sheet Preview">
+        <h3>{{ sheet.title }}</h3>
+      </a>
+      <p>by <a (click)="searchByComposer(sheet.composer)">{{ sheet.composer }}</a></p>
+      <p>Instrument : <a (click)="search(sheet.instrument)">{{ sheet.instrument }}</a></p>
+    </div>
+  </div>
+</div>
+
+
+<div id="by-instrument" class="section">
+  <h2>Search by instrument</h2>
+
+  <div class="all-instruments">
+    <a class="instrument" (click)="search('Piano')">
+      <img src="assets/images/instruments/piano.png" alt="piano" >
+      <p>Piano</p>
+    </a>
+    <a class="instrument" (click)="search('Voice')">
+      <img src="assets/images/instruments/voice.png" alt="voice">
+      <p>Voice</p>
+    </a>
+    <a class="instrument" (click)="search('Flute, Clarinet, Oboe')">
+      <img src="assets/images/instruments/woodwinds.png" alt="woodwinds">
+      <p>Woodwinds</p>
+    </a>
+    <a class="instrument" (click)="search('Trumpet, Trombone, Saxophone')">
+      <img src="assets/images/instruments/brass.png" alt="brass">
+      <p>Brass</p>
+    </a>
+    <a class="instrument" (click)="search('Violin, Cello, Alto')">
+      <img src="assets/images/instruments/strings.png" alt="strings">
+      <p>Strings</p>
+    </a>
+  </div>
+</div>
+

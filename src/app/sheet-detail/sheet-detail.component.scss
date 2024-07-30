@@ -1,0 +1,22 @@
+.sheet-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 2500px;
+}
+
+.sheet-image {
+  flex: 1 1 50%; /* Take up 50% of the container */
+  padding: 0 5% ;
+}
+
+.sheet-image img {
+  width: 80%;
+}
+
+.sheet-info {
+  flex: 1 1 50%; /* Take up 50% of the container */
+  padding: 10px;
+  box-sizing: border-box;
+}
+

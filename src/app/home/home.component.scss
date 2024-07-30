@@ -1,0 +1,37 @@
+.all-instruments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin: 0 10%;
+
+}
+
+.instrument {
+  text-align: center;
+  min-width: 150px;
+}
+
+.all-instruments img {
+  height: 100px;
+  margin-bottom: 5px;
+}
+.background-stripe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  background-color: var(--color-5);
+  z-index: -1; //stays in the background
+}
+
+.welcome h3 {
+  //make it less bold
+  font-weight: 300;
+}
+
+.section {
+  //make them further apart
+  margin-bottom: 100px;
+}
