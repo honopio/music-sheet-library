@@ -10,11 +10,12 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+git push -u origin main
 
 # IDEs and editors
 .idea/
 .project
-.classpath
+.classpathhttps://github.com/honopio/music-sheet-library.git
 .c9/
 *.launch
 .settings/
@@ -42,3 +43,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# TODO
+TODO.md

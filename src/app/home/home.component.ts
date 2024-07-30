@@ -19,9 +19,9 @@ export class HomeComponent {
   constructor(private router: Router, private SheetService: SheetService) { }
 
   ngOnInit() {
-    this.favSheets.push(this.SheetService.getSheetById(1));
+    this.favSheets.push(this.SheetService.getSheetById(7));
+    this.favSheets.push(this.SheetService.getSheetById(6));
     this.favSheets.push(this.SheetService.getSheetById(2));
-    this.favSheets.push(this.SheetService.getSheetById(3));
   }
 
   search(query: string) {

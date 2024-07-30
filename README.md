@@ -1,27 +1,37 @@
-# EasySheet
+# Easy Sheets
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+## Description
+This project is a web application built with Angular and designed to help musicans find music sheets.  
+**[Deployed and hosted on Netlify](https://easy-sheets.netlify.app).**
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
+- **Search music sheets** : quickly search for music sheets by title, composer or instrument via the searchbar or filter options.
+- **View music sheets** and navigate between them
+- **Download sheets** : sheets can be opened in pdf format.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+- Node.js
+- npm (included with Node.js)
+- Angular CLI v17
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Steps
 
-## Running unit tests
+1. Clone the repository:
+```sh
+git clone https://github.com/honopio/music-sheet-library.git
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Install dependencies
+```sh
+npm install
+```
 
-## Running end-to-end tests
+3. Start the development server
+```sh
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

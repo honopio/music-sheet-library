@@ -40,6 +40,7 @@ export class SheetListComponent {
     });
   }
 
+
   /**
    * sheetsFiltered is updated with the sheets that match the search query.
    */
@@ -65,14 +66,24 @@ export class SheetListComponent {
   goBack(): void { this.location.back(); }
 
   refineSearch(selectedComposers: HTMLSelectElement, selectedInstruments: HTMLSelectElement) {
+    this.searchQuery = ''; //clear the search query
     let composersFiltered = Array.from(selectedComposers.selectedOptions).map(option => option.value);
     let instrumentsFiltered = Array.from(selectedInstruments.selectedOptions).map(option => option.value);
 
-    if (composersFiltered.includes('any') || composersFiltered.length === 0) { composersFiltered = this.composers; }
-    if (instrumentsFiltered.includes('any') || instrumentsFiltered.length === 0) { instrumentsFiltered = this.instruments; }
+    if (composersFiltered.length === 0 && instrumentsFiltered.length === 0) { return; } //nothing was selected
 
-    //concatenate every selected composer and instrument
-    this.searchQuery = composersFiltered.concat(instrumentsFiltered).join(', ');
+    if (composersFiltered.includes('any') || composersFiltered.length === 0) { composersFiltered = this.composers; }
+    else { this.searchQuery = this.searchQuery.concat(composersFiltered.join(', ')); }
+    if (instrumentsFiltered.includes('any') || instrumentsFiltered.length === 0) { instrumentsFiltered = this.instruments; }
+    else {
+      if (!(this.searchQuery === '')) { this.searchQuery = this.searchQuery.concat(', '); }
+      this.searchQuery = this.searchQuery.concat(instrumentsFiltered.join(', ')); }
+
     this.sheetsFiltered = this.sheetService.intersect(instrumentsFiltered, composersFiltered);
+    console.log(this.searchQuery);
+
+    //clear the labels after the search
+    selectedComposers.selectedIndex = -1;
+    selectedInstruments.selectedIndex = -1;
   }
 }
