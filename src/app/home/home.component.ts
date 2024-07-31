@@ -32,4 +32,9 @@ export class HomeComponent {
     this.router.navigate(['/list'], { queryParams: { composer } });
   }
 
+  scroll(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) { section.scrollIntoView({ behavior: 'smooth' }); }
+  }
+
 }

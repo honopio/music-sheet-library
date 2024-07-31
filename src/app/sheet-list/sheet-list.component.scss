@@ -44,3 +44,9 @@ h1 {
 .pagination ::ng-deep .current {
   background-color: var(--color-3);
 }
+.pagination ::ng-deep * {
+  color: var(--color-2)
+}
+.pagination ::ng-deep .disabled * {
+  color: grey;
+}

@@ -6,7 +6,11 @@
   <h1>The best place to learn and play new music pieces.</h1>
   <h3>Easy Sheet is a free online music sheet viewer. Our library offers a wide range of sheet music for all skill levels and genres.
     <br>Use the search bar on the top right to find your favorite pieces. You can look for a specific title, composer, or instrument.
-    <br>If you want to explore our library, you can <a href="#latest-releases">check our favorite sheets</a> or <a href="#by-instrument">search by instrument.</a></h3><br><br>
+    <br>If you want to explore our library, you can
+    <a (click)="scroll('our-favorites')">check our favorites</a>
+    or
+    <a (click)="scroll('by-instrument')">search by instrument</a>.
+  </h3><br><br>
 </div>
 
 <div id="our-favorites" class="section">
