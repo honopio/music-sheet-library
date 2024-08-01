@@ -3,18 +3,23 @@ footer {
   left: 0;
   width: 100%;
   margin-top: 80px;
-  //make it shrink to the bottom
 
 }
 
 .footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  //make the columns more in the middle
+  margin: 0 10%;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    margin:0;
+  }
 }
 
 .footer-column ul {
   list-style-type: none;
-  padding: 0;
+  padding: 5%;
 }

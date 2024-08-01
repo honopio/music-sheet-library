@@ -33,6 +33,11 @@ html {
   //make it less bold
   font-weight: 300;
 }
+@media (max-width: 600px) {
+  .welcome h3 {
+    font-size: 1em;
+  }
+}
 
 .section {
   //make them further apart
@@ -44,3 +49,4 @@ html {
   text-underline-offset: 8px;
   text-decoration-thickness: 1px;
 }
+

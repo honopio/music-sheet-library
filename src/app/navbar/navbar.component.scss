@@ -4,6 +4,11 @@
   color: var(--color-3); //override the body color
   margin-bottom: auto;
 }
+@media (max-width: 600px) {
+  #logo {
+    font-size: 1.5em;
+  }
+}
 
 nav {
   display: flex;
@@ -47,6 +52,13 @@ nav * {
 .search-bar {
   display: none; // hide the search bar by default
 
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    //make it smaller
+    width: 100px;
+  }
 }
 
 img {

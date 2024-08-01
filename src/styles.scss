@@ -73,3 +73,10 @@ input, textarea, select {
   box-shadow: 0 0 0 1px var(--color-2);
   outline: none;
 }
+
+//make the input fields visible on phone
+@media (max-width: 600px) {
+  input, textarea, select {
+    background-color: white;
+  }
+}
