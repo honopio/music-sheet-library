@@ -16,5 +16,4 @@ export class AboutComponent {
   onSubmit() {
     this.messageSent = true;
   }
-
 }

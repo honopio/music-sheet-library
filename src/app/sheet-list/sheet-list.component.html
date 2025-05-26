@@ -15,7 +15,7 @@
 <div class="refine-search">
 
   <div class="box">
-    <label for="composers" >Select composers</label><br>
+    <h4 for="composers">Select composers</h4>
     <select id="composers"  multiple #selectedComposers>
       <option value="any">Any</option>
       <option *ngFor="let composer of composers" [value]="composer">{{ composer }}</option>
@@ -23,14 +23,14 @@
   </div>
 
   <div class="box">
-    <label for="instruments" >Select instruments</label><br>
+    <h4 for="instruments">Select instruments</h4>
     <select id="instruments"  multiple #selectedInstruments>
       <option value="any">Any</option>
       <option *ngFor="let instrument of instruments" [value]="instrument">{{ instrument }}</option>
     </select>
   </div>
 
-  <div class="box">
+  <div class="box" id="search-buttons">
     <button (click)="refineSearch(selectedComposers, selectedInstruments)">Refine Search</button><br>
     <button (click)="resetFilter()">Clear Search</button>
   </div>
@@ -50,5 +50,5 @@
 
 
 </div>
-<pagination-controls class="pagination" (pageChange)="page = $event"></pagination-controls>
 <h2 *ngIf="sheetsFiltered.length === 0" style="text-align: center; margin-top: 3em;" >No sheets found :(</h2>
+<pagination-controls *ngIf="sheetsFiltered.length !== 0" class="pagination" (pageChange)="page = $event"></pagination-controls>
