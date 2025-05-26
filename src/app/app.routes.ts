@@ -13,5 +13,4 @@ export const routes: Routes = [
   { path: 'list', component: SheetListComponent },
   { path: 'list/:id', component: SheetDetailComponent },
   { path: 'credits', component: CreditsComponent}
-
 ];
