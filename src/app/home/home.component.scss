@@ -1,13 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
+
 .all-instruments {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   justify-content: center;
-  margin: 0 10%;
-
+  margin: 5%;
 }
 
 .instrument {
@@ -19,6 +19,7 @@ html {
   height: 100px;
   margin-bottom: 5px;
 }
+
 .background-stripe {
   position: fixed;
   top: 0;
@@ -33,15 +34,9 @@ html {
   //make it less bold
   font-weight: 300;
 }
-@media (max-width: 600px) {
-  .welcome h3 {
-    font-size: 1em;
-  }
-}
 
 .section {
-  //make them further apart
-  margin-bottom: 100px;
+  margin: 10% 0;
 }
 
 .welcome a {
@@ -50,3 +45,13 @@ html {
   text-decoration-thickness: 1px;
 }
 
+@media (max-width: 600px) {
+  .all-instruments {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 0 0;
+  }
+
+  .instrument {
+    min-width: 100px;
+  }
+}
