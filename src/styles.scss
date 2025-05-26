@@ -73,6 +73,10 @@ input, textarea, select {
   outline: none;
 }
 
+p {
+  margin: 0.4em 0;
+}
+
 //make the input fields visible on phone
 @media (max-width: 600px) {
   input, textarea, select {
