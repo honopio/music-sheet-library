@@ -1,13 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
+
 .all-instruments {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   justify-content: center;
   margin: 0 10%;
-
 }
 
 .instrument {
@@ -19,6 +19,7 @@ html {
   height: 100px;
   margin-bottom: 5px;
 }
+
 .background-stripe {
   position: fixed;
   top: 0;
@@ -33,14 +34,8 @@ html {
   //make it less bold
   font-weight: 300;
 }
-@media (max-width: 600px) {
-  .welcome h3 {
-    font-size: 1em;
-  }
-}
 
 .section {
-  //make them further apart
   margin-bottom: 150px;
 }
 
@@ -50,3 +45,20 @@ html {
   text-decoration-thickness: 1px;
 }
 
+.sheet-list {
+  display: grid;
+  margin: 0;
+}
+
+.sheet-card {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.sheet-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; // white space if needed
+  object-position: center;
+}
