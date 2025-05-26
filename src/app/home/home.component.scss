@@ -62,3 +62,33 @@ html {
   object-fit: contain; // white space if needed
   object-position: center;
 }
+
+@media (max-width: 600px) {
+  .sheet-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .all-instruments {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 0 0;
+  }
+
+  .instrument {
+    min-width: 100px;
+  }
+
+  .sheet-card {
+    padding-bottom: 10px;
+  }
+
+  .sheet-card p {
+    margin: 2px 0;
+    font-size: 0.9em;
+  }
+
+  .sheet-card h3 {
+    margin-bottom: 5px;
+  }
+}
