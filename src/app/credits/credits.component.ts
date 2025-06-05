@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './credits.component.html',
-  styleUrl: './credits.component.scss'
 })
 export class CreditsComponent {
 }
