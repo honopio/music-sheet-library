@@ -1,7 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
 @import "./styles/list-display-styles.scss";
-
-// font
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:wght@400;700&display=swap');
 
 
@@ -47,6 +44,32 @@ a {
     cursor: pointer;
 }
 a:hover { color: var(--color-3); }
+
+@media (max-width: 600px) {
+  html, body {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  p, a, button, input, textarea, select {
+    font-size: 1em;
+  }
+}
 
 button {
   background-color: var(--color-2);

@@ -1,6 +1,12 @@
 <nav>
   <a id="logo" routerLink="/">easy sheets</a>
-  <div class="nav-content">
+
+  <!-- Mobile hamburger button -->
+  <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+    <img src="assets/images/menu.png" id="menu-logo" alt="open menu">
+  </button>
+
+  <div class="nav-content" [class.mobile-open]="isMobileMenuOpen">
     <ul id="nav-links">
       <li class="search">
         <input id="search-bar" class="search-bar" type="text" (keyup.enter)="onSearch(filter.value)" placeholder="Search" #filter>
@@ -8,9 +14,12 @@
           <img src="assets/images/search.png" alt="search icon">
         </a>
       </li>
-      <li><a routerLink="/">Home</a></li>
-      <li><a (click)="viewAll()">View all</a></li>
-      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/" (click)="closeMobileMenu()">Home</a></li>
+      <li><a (click)="viewAll(); closeMobileMenu()">View all</a></li>
+      <li><a routerLink="/about" (click)="closeMobileMenu()">About</a></li>
     </ul>
   </div>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()"></div>
 </nav>
