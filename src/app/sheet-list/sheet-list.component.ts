@@ -15,7 +15,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
 export class SheetListComponent {
 
-  sheets = this.sheetService.getSheets(); //all sheets
+  sheets = this.sheetService.getSheets();
   sheetsFiltered = this.sheets;
   searchQuery: string = '';
   composers: string[] = [];
