@@ -2,16 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FooterComponent } from "./footer/footer.component";
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { SheetListComponent } from './sheet-list/sheet-list.component';
-import { SheetDetailComponent } from './sheet-detail/sheet-detail.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, HomeComponent, AboutComponent, SheetListComponent, SheetDetailComponent, CommonModule],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
