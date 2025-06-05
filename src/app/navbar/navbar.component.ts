@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  isMobileMenuOpen = false;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -27,6 +29,36 @@ export class NavbarComponent {
       });
     }
     document.addEventListener('click', this.hideSearchBar);
+
+    // Close mobile menu when clicking outside or on escape key
+    document.addEventListener('keydown', this.handleEscapeKey);
+  }
+
+  ngOnDestroy(): void {
+    document.removeEventListener('click', this.hideSearchBar);
+    document.removeEventListener('keydown', this.handleEscapeKey);
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+
+    // Prevent body scroll when menu is open
+    if (this.isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  handleEscapeKey = (event: KeyboardEvent): void => {
+    if (event.key === 'Escape' && this.isMobileMenuOpen) {
+      this.closeMobileMenu();
+    }
   }
 
   hideSearchBar = (event: MouseEvent) => {
@@ -41,7 +73,8 @@ export class NavbarComponent {
 
   onSearch(filter: string) {
     if (!(filter === '' || filter === null || filter === undefined)) {
-    this.router.navigate(['/list'], { queryParams: { query: filter } });
+      this.router.navigate(['/list'], { queryParams: { query: filter } });
+      this.closeMobileMenu();
     }
   }
 
