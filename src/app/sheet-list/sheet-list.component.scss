@@ -6,13 +6,31 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
-  margin: 5% 0;
+  margin: 2% 0;
   align-items: center;
   text-align: center;
 }
 
 .refine-search .box {
   margin: 0 10px;
+}
+
+
+@media (max-width: 700px) {
+  .refine-search {
+    grid-template-columns: 1fr;
+  }
+  #search-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+  }
+  #search-buttons button {
+    margin-top: 0;
+    width: auto;
+    flex: 1 1 0;
+  }
 }
 
 select {
