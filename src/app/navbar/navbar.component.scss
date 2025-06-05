@@ -95,14 +95,14 @@ img {
   vertical-align: middle;
 }
 
-// Mobile styles
 @media (max-width: 700px) {
   #logo {
     font-size: 1.5em;
   }
   nav {
-    padding: 1em 1em 0;
+    padding: 1em;
     align-items: center;
+    margin-bottom: 1em;
   }
 
   .mobile-menu-toggle {
@@ -127,13 +127,11 @@ img {
     }
   }
 
-  .mobile-overlay {
+.mobile-overlay {
+  &.active {
     display: block;
-
-    &.active {
-      display: block;
-    }
   }
+}
 
   #nav-links {
     flex-direction: column;
