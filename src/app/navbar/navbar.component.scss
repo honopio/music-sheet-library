@@ -1,12 +1,7 @@
 #logo {
   font-size: 2em;
   margin-bottom: auto;
-}
-
-@media (max-width: 600px) {
-  #logo {
-    font-size: 1.5em;
-  }
+  z-index: 1001;
 }
 
 nav {
@@ -17,10 +12,47 @@ nav {
   top: 0;
   pointer-events: none;
   padding-top: 1em;
+  align-items: flex-start;
 }
 
 nav * {
-  pointer-events: auto; // make everything from the navbar clickable
+  pointer-events: auto;
+}
+
+// Mobile hamburger menu button
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 1001;
+}
+
+#menu-logo {
+  width: 35px;
+}
+
+// Mobile overlay
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.active {
+    opacity: 1;
+  }
 }
 
 #nav-links {
@@ -57,14 +89,78 @@ nav * {
   height: 15px;
 }
 
-@media (max-width: 600px) {
-  .search-bar {
-    width: 100px;
-  }
-}
-
 img {
   height: 25px;
   width: auto;
   vertical-align: middle;
+}
+
+@media (max-width: 700px) {
+  #logo {
+    font-size: 1.5em;
+  }
+  nav {
+    padding: 1em;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-content {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60vw;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--color-1);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 60px 1.5em 1.5em;
+    transition: right 0.3s ease;
+
+    &.mobile-open {
+      right: 0;
+    }
+  }
+
+.mobile-overlay {
+  &.active {
+    display: block;
+  }
+}
+
+  #nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #nav-links a {
+    width: 100%;
+    display: block;
+    padding: 0.3em 0;
+    font-size: 1.2em;
+  }
+
+  .search {
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-bar {
+    padding: 0.4em;
+    border-radius: 4px;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .search-icon {
+    display: flex;
+    align-items: center;
+  }
 }

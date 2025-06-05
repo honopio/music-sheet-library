@@ -45,6 +45,32 @@ a {
 }
 a:hover { color: var(--color-3); }
 
+@media (max-width: 600px) {
+  html, body {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  p, a, button, input, textarea, select {
+    font-size: 1em;
+  }
+}
+
 button {
   background-color: var(--color-2);
   color: var(--color-1);
